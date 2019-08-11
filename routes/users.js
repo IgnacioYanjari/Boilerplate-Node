@@ -17,6 +17,10 @@ router.post('/', bodymen.middleware({
     password: {
       type: String,
       required: true
+    },
+    user: {
+      type: String,
+      required: true
     }
 }), (req, res, next) => {
     return userController.create(req, res);

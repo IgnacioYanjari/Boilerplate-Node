@@ -3,12 +3,12 @@ module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
     first_name: DataTypes.STRING,
     last_name: DataTypes.STRING,
-    password: DataTypes.STRING
+    password: DataTypes.STRING,
+    user: DataTypes.STRING,
   }, {
       underscored: true,
       defaultScope: {
         attributes: {
-          // agregar underscored a migración
           exclude: ['password', 'createdAt', 'updatedAt']
         },
       }

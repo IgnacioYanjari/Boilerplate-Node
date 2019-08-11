@@ -1,6 +1,8 @@
-const express = require('express');
-const app = express();
+
+const verifyJwt = require('./verifyJwt.js');
 
 // call another middlewares inside the folder.
+let middlewares = {};
+middlewares['verifyJwt'] = verifyJwt;
 
-module.exports = app;
+module.exports = middlewares;
