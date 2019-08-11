@@ -1,25 +1,28 @@
 
+// config json for connect postgresql
+
 require('dotenv').config();
+let environment = process.env;
 module.exports = {
   "development": {
-    "username": "santander",
-    "password": process.env.DEV_PSW,
-    "database": "santander",
+    "username": environment.DEV_USER,
+    "password": environment.DEV_PSW,
+    "database": environment.DEV_DB,
     "host": "127.0.0.1",
     "dialect": "postgresql"
   },
   "test": {
-    "username": "santander",
-    "password": process.env.TEST_PSW,
-    "database": "santander",
-    "host": "127.0.0.1",
+    "username": environment.TEST_USER,
+    "password": environment.TEST_PSW,
+    "database": environment.TEST_DB,
+    "host": environment.TEST_HOST,
     "dialect": "postgresql"
   },
   "production": {
-    "username": "santander",
-    "password": process.env.PROD_PSW,
-    "database": "santander",
-    "host": "127.0.0.1",
+    "username": environment.PROD_USER,
+    "password": environment.PROD_PSW,
+    "database": environment.PROD_DB,
+    "host": environment.PROD_HOST,
     "dialect": "postgresql"
   }
 }
