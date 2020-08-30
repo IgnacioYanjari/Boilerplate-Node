@@ -7,7 +7,7 @@
         "debug": "DEBUG=proyecto-santander:dev npm run dev"
     },
     "dependencies": {
-        "bcrypt": "^3.0.6",
+        "bcrypt": "^5.0.0",
         "body-parser": "^1.19.0",
         "bodymen": "^1.1.0",
         "cookie-parser": "~1.4.3",
